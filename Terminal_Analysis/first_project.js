@@ -1,6 +1,7 @@
 const dfd = require("danfojs-node")
 const readline = require('node:readline');
 
+// This function prints out the choices a user can pick and opens readline for inputs
 function main() {
    while(true) {
       console.log("Please pick one: ")
@@ -41,6 +42,7 @@ function main() {
 }
 main()
 
+// This function filters out the gender and food identity column to show how many women are in each food identity.
 function gender() {
    dfd.readCSV("/Users/student/Desktop/Engineering-Practicum/Data_project_HTML/Data/Dietary Habits Survey Data.csv")
       .then(df => {
@@ -54,6 +56,7 @@ function gender() {
       .catch(err => console.error(err));
 };
 
+// This function also filters out the gender and food identity column but shows how many men are in each food identity.
 function gender2() {
    dfd.readCSV("/Users/student/Desktop/Engineering-Practicum/Data_project_HTML/Data/Dietary Habits Survey Data.csv")
       .then(df => {
