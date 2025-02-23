@@ -1,0 +1,117 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietary Habits</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Pescatarian', 'Non-Vegetarian', 'Eggetarian', 'Vegetarian'],
+            datasets: [{
+              label: 'Identities',
+              data: [3, 4, 2, 5, 2, 3],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div>
+      <p>Food Identities</p>
+    </div>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-vc58qvvBdrDR4etbxMdlTt4GBQk1qjvyORR2nrsPsFPyrs+/u5c3+1Ct6upOgdZoIl7eq6k3a1UPDSNAQi/32A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+
+    <script>
+    // setup 
+    const data = {
+      labels: ['Pollotarian', 'Vegetarian', 'Pescatarian', 'Non-Vegetarian', 'Eggetarian', 'Pollo-pesceterian'],
+      datasets: [{
+        label: 'Female Food Identity',
+        data: [2, 15, 1, 9, 8, 3],
+        backgroundColor: [
+          'rgba(255, 26, 104, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 26, 104, 1)'
+        ],
+        borderWidth: 1
+      },{
+       label: 'Male Food Identity',
+        data: [4, 7, 2, 20, 7, 0],
+        backgroundColor: [
+          'rgba(54, 162, 235, 0.2)'
+        ],
+        borderColor: [
+          'rgba(54, 162, 235, 1)'
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    // Instantly assign Chart.js version
+    const chartVersion = document.getElementById('chartVersion');
+    chartVersion.innerText = Chart.version;
+    </script>
+
+  </body>
+</html>
+
+
+
