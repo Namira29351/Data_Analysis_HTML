@@ -22,4 +22,13 @@ There are many things people can identify as when it comes to eating habits. Veg
 
 3. Visualizations
    - Type 1: A bar graph of the data is shown with the x-axis being the name of the food identity and the y-axis being the number of women and men that have a certain food identity. Men are attributed the blue colored bar graph and women are attributed the pink color bar graph.
-   - Type 2: A pie chart is shown with the percentage of women in each food identity.
+
+## Program Structure
+project/
+├── README.md
+├── Terminal_Analysis       # Javascript terminal data analysis directory 
+    └── first_project.js    
+├── Visualization           # Data visualization directory 
+    └── first_project.html   
+└── data/                   # Data directory
+    └── dataset.csv
